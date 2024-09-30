@@ -1,0 +1,149 @@
+.menu {
+    grid-area: menu;
+    background-color:rgba(242,235,231,255);
+    color: rgb(68,61,60);
+    gap: 10px;
+
+}
+
+.menu ul {
+    display: none;
+    list-style-type: none;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.menu li{
+    padding-top: 10px;
+    padding-right: 50px;
+}
+.menu li:hover{
+    color: #eea66f;
+}
+
+.titulo{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+
+}
+.titulo i{
+    font-size: 25px;
+    gap: 10px;
+}
+
+.productos {
+    grid-area: producto;
+    background-color: #F2F2F2;
+}
+.container{
+    text-align: center;
+}
+.anuncio{
+    background-color: rgb(255, 255, 255);
+    padding: 3px 3px 3px 3px;
+    border: 1px solid rgb(228, 226, 217);
+    display: flex;
+    justify-content: center;
+}
+.anuncio i{
+    padding-top: 5px;
+    padding-left: 8px;
+    font-size: 30px;
+}
+
+.principal {
+    grid-area: SeccionPrincipal;
+    background-color: white;
+}
+.carta{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+.cafe{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+.cafe:hover{
+    filter: grayscale(0%);
+}
+.cafe img {
+    width: 350px;
+    height: 300px;
+}
+
+.cafe button{
+    border: none;
+    background-color: #eea66f;
+    color: white;
+    height: 30px;
+    width: 70px;
+    font-size: 15px;
+}
+
+footer {
+    grid-area: pie;
+    background-color: #6d6056;
+
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+.redes i{
+    color: white;
+    font-size: 30px;
+    padding-top: 10px;
+}
+.redes i:hover{
+    color: #eea66f;
+}
+.texto{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        "menu"
+        "producto"
+        "SeccionPrincipal"
+        "pie";
+}
+
+
+@media (min-width:576px) {
+    body {
+        grid-template-areas:
+            "menu producto producto"
+            "menu SeccionPrincipal       SeccionPrincipal"
+            "menu SeccionPrincipal       SeccionPrincipal"
+            "pie  SeccionPrincipal       SeccionPrincipal";
+        grid-template-columns: 15% auto auto;
+    }
+    .menu ul{
+        display: block;
+    }
+    .barra i{
+        display: none;
+        
+    }
+
+   }
